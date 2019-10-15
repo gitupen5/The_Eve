@@ -52,7 +52,7 @@ TextureImporter:
     second: MachineGun
   - first:
       213: -3355605324767024174
-    second: AstronautSpriteAtlas_11
+    second: Pistol
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -380,7 +380,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstronautSpriteAtlas_11
+      name: Pistol
       rect:
         serializedVersion: 2
         x: 77
