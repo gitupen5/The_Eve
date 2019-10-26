@@ -511,7 +511,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 13
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1332,11 +1332,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcb4fb352b914a4d8bdf190bb95ebd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0
+  fireRate: 60
   Damage: 10
   whatToHit:
     serializedVersion: 2
     m_Bits: 563
+  BulletTrailPrefab: {fileID: 7955120220554501893, guid: 6683ac610c804344d91992b58f87e5e0,
+    type: 3}
+  effectSpawnRate: 20
 --- !u!1 &2048681673
 GameObject:
   m_ObjectHideFlags: 0
