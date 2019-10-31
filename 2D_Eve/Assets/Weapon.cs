@@ -77,6 +77,7 @@ public class Weapon : MonoBehaviour
 
     void Effect()
     {
+        //destryoing muzzle flash by making clone.
         Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
         Transform clone = (Transform) Instantiate(MuzzleFlashPrefab, firePoint.position, firePoint.rotation);
         clone.parent = firePoint;
