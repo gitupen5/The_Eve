@@ -16,6 +16,7 @@ public class GameMaster : MonoBehaviour
     public Transform playerPrefab;
     public Transform spawnPoint;
     public int spawnDelay = 2;
+    public Transform spawnPrefab;
 
 
     //Respawning the player with some delay.
@@ -24,12 +25,11 @@ public class GameMaster : MonoBehaviour
         Debug.Log("TODO: Add waiting for spawn sound");  
         yield return new WaitForSeconds(spawnDelay);
 
-        Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);  
-        Debug.Log("TODO: Add Spawn Particles");
+        Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation);
+        
 
     }
-
-
     //killing the player when it falls from high or jump
     public static void KillPlayer(Player player)
     {
