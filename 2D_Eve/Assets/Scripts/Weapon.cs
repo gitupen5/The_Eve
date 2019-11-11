@@ -6,6 +6,9 @@ public class Weapon : MonoBehaviour
 {
 
     public float fireRate = 0f;
+
+    public Transform HitPrefab;
+
     public int Damage = 10;
     public LayerMask whatToHit;
 
@@ -58,11 +61,7 @@ public class Weapon : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(firePointPosition, mousePosition - firePointPosition, 100, whatToHit);
 
-        if(Time.time >= timeToSpawnEffect)
-        {
-            Effect();
-            timeToSpawnEffect = Time.time + 1 / effectSpawnRate;
-        }
+        
         
         Debug.DrawLine(firePointPosition, (mousePosition-firePointPosition)*100, Color.cyan);
 
@@ -79,13 +78,55 @@ public class Weapon : MonoBehaviour
             }
         }
 
+        if (Time.time >= timeToSpawnEffect)
+        {
+            Vector3 hitPos;
+            Vector3 hitNormal;
+
+            if (hit.collider == null)
+            {
+                hitPos = (mousePosition - firePointPosition) * 30;
+                hitNormal = new Vector3(9999, 9999, 9999);
+
+            }
+            else {
+                hitPos = hit.point;
+                hitNormal = hit.normal;
+            }
+            
+            Effect(hitPos, hitNormal);
+
+            timeToSpawnEffect = Time.time + 1 / effectSpawnRate;
+        }
+
     }
 
-    void Effect()
+    void Effect(Vector3 hitPos, Vector3 hitNormal)
     {
         //destryoing muzzle flash by making clone.
-        Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
+        
+        Transform trail = Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation) as Transform;
+        LineRenderer lr = trail.GetComponent<LineRenderer>();
+
+        if( lr != null)
+        {
+            lr.SetPosition(0, firePoint.position);
+            lr.SetPosition(1, hitPos); 
+
+
+        }
+        Destroy(trail.gameObject, 0.02f);
+
+
+        if(hitNormal != new Vector3(9999, 9999, 9999))
+        {
+           Transform hitParticle = Instantiate(HitPrefab, hitPos, Quaternion.FromToRotation(Vector3.right, hitNormal)) as Transform;
+            Destroy(hitParticle.gameObject, 1f);
+        }
+
+
         Transform clone = (Transform) Instantiate(MuzzleFlashPrefab, firePoint.position, firePoint.rotation);
+
         clone.parent = firePoint;
         float size = Random.Range(0.6f, 0.9f);
         clone.localScale = new Vector3(size, size, size);
