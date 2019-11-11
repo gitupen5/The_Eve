@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class GameMaster : MonoBehaviour
 {
+
     public static GameMaster gm;
-    void Start()
+
+    void Awake()
     {
         if (gm == null)
         {
@@ -15,11 +16,9 @@ public class GameMaster : MonoBehaviour
 
     public Transform playerPrefab;
     public Transform spawnPoint;
-    public int spawnDelay = 2;
+    public float spawnDelay = 2;
     public Transform spawnPrefab;
 
-
-    //Respawning the player with some delay.
     public IEnumerator RespawnPlayer()
     {
         Debug.Log("TODO: Add waiting for spawn sound");
@@ -30,7 +29,7 @@ public class GameMaster : MonoBehaviour
 
 
     }
-    //killing the player when it falls from high or jump
+
     public static void KillPlayer(Player player)
     {
         Destroy(player.gameObject);
@@ -40,6 +39,6 @@ public class GameMaster : MonoBehaviour
     public static void KillEnemy(Enemy enemy)
     {
         Destroy(enemy.gameObject);
-        
     }
+
 }
