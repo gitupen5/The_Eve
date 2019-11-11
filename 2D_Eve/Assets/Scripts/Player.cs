@@ -7,29 +7,62 @@ public class Player : MonoBehaviour
     [System.Serializable]
     public class PlayerStats
     {
-        public int Health = 100;
-    }
+        public int maxHealth = 100;
 
-    public PlayerStats playerStats = new PlayerStats();
-
-
-    public int fallBoundry = -20;
-    void Update()
-    {
-        if(transform.position.y <= fallBoundry)
+        private int _currentHealth;
+        public int curHealth
         {
-            DamagePlayer(9999999);
-        }       
-    }
+            get { return _currentHealth; }
+            set { _currentHealth = Mathf.Clamp(value, 0, maxHealth); }
 
+        }
 
-    public void DamagePlayer(int damage)
-    {
-        playerStats.Health -= damage;
-        if(playerStats.Health <= 0)
+        public void Init()
         {
-            GameMaster.KillPlayer(this);
+            _currentHealth = maxHealth;
         }
     }
 
-}
+    public PlayerStats stats = new PlayerStats();
+
+
+    public int fallBoundry = -20;
+
+    [SerializeField]
+    private StatusIndicator statusIndicator;
+
+    void Start()
+    {
+        stats.Init();
+
+        if (statusIndicator == null)
+        {
+            Debug.LogError("No Status indicator refrenced on the Player");
+
+        }
+        else
+        {
+            statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
+        }
+    }
+
+        void Update()
+        {
+            if (transform.position.y <= fallBoundry)
+            {
+                DamagePlayer(9999999);
+            }
+        }
+        public void DamagePlayer(int damage)
+        {
+            stats.curHealth -= damage;
+            if (stats.curHealth <= 0)
+            {
+                GameMaster.KillPlayer(this);
+            }
+
+            statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
+
+        }
+
+    }

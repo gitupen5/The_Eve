@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 6479048826073401425}
   - component: {fileID: 6479048826073401426}
   - component: {fileID: 6479048826073401424}
+  - component: {fileID: 864219054}
   m_Layer: 0
   m_Name: _GM
   m_TagString: GM
@@ -97,3 +98,17 @@ MonoBehaviour:
   spawnDelay: 1
   spawnPrefab: {fileID: 4281828473390080713, guid: c1ab644c1bfed024b815ec241c90449d,
     type: 3}
+  cameraShake: {fileID: 864219054}
+--- !u!114 &864219054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6479048826073401427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2933d22456c8145aa319cc066cf62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 0}

@@ -20,6 +20,10 @@ public class Enemy : MonoBehaviour
             set { _curHealth = Mathf.Clamp(value, 0, maxHealth); }
         }
 
+        public int damage = 40;
+
+        
+
         public void Init()
         {
             curHealth = maxHealth;
@@ -28,6 +32,10 @@ public class Enemy : MonoBehaviour
     }
 
     public EnemyStats stats = new EnemyStats();
+
+    public Transform deathParticle;
+    public float shakeAmt = 0.1f;
+    public float shakeLength = 0.1f;
 
 
     [Header("Optional: ")]  //it allow something to type in the unity Editor
@@ -41,6 +49,11 @@ public class Enemy : MonoBehaviour
         if(statusIndicator != null)
         {
             statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
+        }
+
+        if(deathParticle == null)
+        {
+            Debug.LogError("No death particle referenced to the Enemy");
         }
 
     }
@@ -58,5 +71,17 @@ public class Enemy : MonoBehaviour
         }
 
     }
+
+    void OnCollisionEnter2D(Collision2D _colInfo)
+    {
+        Player _player = _colInfo.collider.GetComponent<Player>();
+        if(_player != null)
+        {
+            _player.DamagePlayer(stats.damage);
+            DamageEnemy(999999);
+        }
+
+    }
+
 }
  
