@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 6479048826073401426}
   - component: {fileID: 6479048826073401424}
   - component: {fileID: 864219054}
+  - component: {fileID: 575284026}
   m_Layer: 0
   m_Name: _GM
   m_TagString: GM
@@ -112,3 +113,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 0}
+--- !u!114 &575284026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6479048826073401427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae188fe869cd254478e8e04a4064608e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: Alien Invasion
+    enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
+    count: 2
+    rate: 1
+  - name: Alien Invasion 2.0
+    enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
+    count: 3
+    rate: 0
+  - name: Hide Now!
+    enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
+    count: 5
+    rate: 2
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  timeBetweenWaves: 5
