@@ -133,11 +133,11 @@ MonoBehaviour:
   - name: Alien Invasion 2.0
     enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
     count: 3
-    rate: 0
+    rate: 2
   - name: Hide Now!
     enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
     count: 5
-    rate: 2
+    rate: 3
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}

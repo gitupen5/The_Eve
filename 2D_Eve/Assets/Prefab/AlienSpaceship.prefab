@@ -167,9 +167,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.03992772}
+  m_Offset: {x: 0, y: 0.011373758}
   serializedVersion: 2
-  m_Radius: 0.70164466
+  m_Radius: 0.6503432
 --- !u!114 &2341812057914022666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,8 +228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.041, y: 0.97}
-  m_SizeDelta: {x: 17.327, y: 4.527}
+  m_AnchoredPosition: {x: 0.01, y: 1.079}
+  m_SizeDelta: {x: 23.098, y: 6.707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2341812058130383043
 Canvas:
@@ -447,7 +447,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 3
+    m_FontSize: 4
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
