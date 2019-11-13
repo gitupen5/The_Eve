@@ -297,8 +297,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 189947115}
-  - component: {fileID: 189947117}
   - component: {fileID: 189947116}
+  - component: {fileID: 189947117}
   m_Layer: 5
   m_Name: WaveUI
   m_TagString: Untagged
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 363101501}
   - component: {fileID: 363101500}
   m_Layer: 5
-  m_Name: WaveCountText
+  m_Name: WaveCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2148,13 +2148,5 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.data[2]
       value: 
       objectReference: {fileID: 861854162}
-    - target: {fileID: 575284026, guid: 6933b512acdc8a546baf05c14bc39a89, type: 3}
-      propertyPath: waves.Array.data[1].rate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 575284026, guid: 6933b512acdc8a546baf05c14bc39a89, type: 3}
-      propertyPath: waves.Array.data[2].rate
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6933b512acdc8a546baf05c14bc39a89, type: 3}
