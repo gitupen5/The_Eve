@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour
     public Transform deathParticle;
     public float shakeAmt = 0.1f;
     public float shakeLength = 0.1f;
+    public string deathSoundName = "Explosion";
 
 
     [Header("Optional: ")]  //it allow something to type in the unity Editor

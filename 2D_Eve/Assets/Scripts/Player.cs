@@ -28,6 +28,10 @@ public class Player : MonoBehaviour
 
     public int fallBoundry = -20;
 
+    public string deathSoundName = "DeathExplosion";
+
+    private AudioManager audioManager;
+
     [SerializeField]
     private StatusIndicator statusIndicator;
 
@@ -44,6 +48,12 @@ public class Player : MonoBehaviour
         {
             statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
         }
+
+        audioManager = AudioManager.instance;
+        if(audioManager == null)
+        {
+            Debug.LogError("No Audio Manager Found In the Scene bee!!");
+        }
     }
 
         void Update()
@@ -58,6 +68,8 @@ public class Player : MonoBehaviour
             stats.curHealth -= damage;
             if (stats.curHealth <= 0)
             {
+            //Play Death Sound.
+            audioManager.PlaySound(deathSoundName);
                 GameMaster.KillPlayer(this);
             }
 

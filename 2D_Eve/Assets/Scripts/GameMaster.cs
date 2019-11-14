@@ -30,9 +30,20 @@ public class GameMaster : MonoBehaviour
     public float spawnDelay = 2;
     public Transform spawnPrefab;
 
+    public string spawnSoundName = "Spawn";
+
+    public string gameOversound = "GameOver";
+
+
     public CameraShake cameraShake;
     [SerializeField]
     private GameObject gameOverUI;
+
+
+    //Cache
+    private AudioManager audioManager;
+    
+
 
     void Start()
     {
@@ -42,18 +53,30 @@ public class GameMaster : MonoBehaviour
         }
         //Resetting Lives.
         _remainingLives = maxLives;
+        //Cache.
+        audioManager = AudioManager.instance;
+        if(audioManager == null)
+        {
+            Debug.LogError("No Audio manager Found in the Scene!!");
+        }
+
     }
 
     public void EndGame()
     {
+        //PlaySound.
+        audioManager.PlaySound(gameOversound);
+
         Debug.Log("GAME OVER");
         gameOverUI.SetActive(true);
     }
 
     public IEnumerator _RespawnPlayer()
     {
-        Debug.Log("TODO: Add waiting for spawn sound");
+        //Debug.Log("TODO: Add waiting for spawn sound");
+        
         yield return new WaitForSeconds(spawnDelay);
+        audioManager.PlaySound(spawnSoundName);
 
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
         Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation);
@@ -81,8 +104,13 @@ public class GameMaster : MonoBehaviour
     }
     public void _KillEnemy(Enemy _enemy)
     {
+        //Add Sound.
+        audioManager.PlaySound(_enemy.deathSoundName);
+
+        //Add Particles
         Instantiate(_enemy.deathParticle, _enemy.transform.position, Quaternion.identity);
         
+        //Add CameraShake.
         cameraShake.Shake(_enemy.shakeAmt, _enemy.shakeLength);
         Destroy(_enemy.gameObject);
     }
