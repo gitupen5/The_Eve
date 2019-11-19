@@ -31,7 +31,7 @@ public void Quit()
 
     public void Retry()
     {
-        audioManager.PlaySound(buttonPressedSound);
+        audioManager.PlaySound(buttonPressedSound); 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

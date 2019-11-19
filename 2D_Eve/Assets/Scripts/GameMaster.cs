@@ -65,7 +65,7 @@ public class GameMaster : MonoBehaviour
     public void EndGame()
     {
         //PlaySound.
-        audioManager.PlaySound(gameOversound);
+        audioManager.PlaySound(gameOversound);  
 
         Debug.Log("GAME OVER");
         gameOverUI.SetActive(true);
