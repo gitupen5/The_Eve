@@ -151,23 +151,23 @@ MonoBehaviour:
     count: 9
     rate: 3
   - name: level 6
-    enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
+    enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
     count: 10
     rate: 2
   - name: level 7
-    enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
+    enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
     count: 11
     rate: 1
   - name: level 8
-    enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
+    enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
     count: 12
     rate: 1
   - name: level 9
-    enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
+    enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
     count: 15
     rate: 1
   - name: level 10
-    enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
+    enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
     count: 16
     rate: 1
   - name: level 11
