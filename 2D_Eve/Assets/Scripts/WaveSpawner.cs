@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class WaveSpawner : MonoBehaviour
 {
 
@@ -67,6 +67,7 @@ public class WaveSpawner : MonoBehaviour
         {
             if (state != SpawnState.SPAWNING)
             {
+                //Immediate Returns
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
@@ -85,7 +86,11 @@ public class WaveSpawner : MonoBehaviour
 
         if (nextWave + 1 > waves.Length - 1)
         {
-            nextWave = 0;
+
+            //TODO: Add Game Finished Credits
+            //nextWave = 0;
+            SceneManager.LoadScene(2);
+            
             Debug.Log("ALL WAVES COMPLETE! Looping...");
         }
         else
@@ -94,6 +99,7 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
+    //Checking weather the Enemy is Alive or Not.
     bool EnemyIsAlive()
     {
         searchCountdown -= Time.deltaTime;
@@ -108,6 +114,7 @@ public class WaveSpawner : MonoBehaviour
         return true;
     }
 
+    //Spawning Waves.
     IEnumerator SpawnWave(Wave _wave)
     {
         Debug.Log("Spawning Wave: " + _wave.name);
@@ -124,6 +131,7 @@ public class WaveSpawner : MonoBehaviour
         yield break;
     }
 
+    //Spawning Enemy.
     void SpawnEnemy(Transform _enemy)
     {
         Debug.Log("Spawning Enemy: " + _enemy.name);
