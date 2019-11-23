@@ -91,7 +91,7 @@ public class WaveSpawner : MonoBehaviour
             //nextWave = 0;
             SceneManager.LoadScene(2);
             
-            Debug.Log("ALL WAVES COMPLETE! Looping...");
+            Debug.Log("Yeah!! You have finshed the game");
         }
         else
         {

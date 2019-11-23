@@ -143,73 +143,33 @@ MonoBehaviour:
     count: 7
     rate: 3
   - name: level 4
-    enemy: {fileID: 8992525614206744724, guid: 0bafa925c6ff44340b24fc707646a36c, type: 3}
+    enemy: {fileID: 2341812057914022664, guid: aea2cb6c87a0dc3418a689c16f888885, type: 3}
     count: 8
     rate: 3
   - name: level 5
-    enemy: {fileID: 2341812057914022664, guid: 2f4c95ecaeb477f47b4913fc8585ff85, type: 3}
+    enemy: {fileID: 2341812057914022664, guid: aea2cb6c87a0dc3418a689c16f888885, type: 3}
     count: 9
-    rate: 3
+    rate: 3.2
   - name: level 6
-    enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
+    enemy: {fileID: 2341812057914022664, guid: aea2cb6c87a0dc3418a689c16f888885, type: 3}
     count: 10
-    rate: 2
+    rate: 3.5
   - name: level 7
-    enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
-    count: 11
-    rate: 1
-  - name: level 8
-    enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
+    enemy: {fileID: 2341812057914022664, guid: 15418ef91d9f816448ba1cdffe812ced, type: 3}
     count: 12
-    rate: 1
-  - name: level 9
-    enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
+    rate: 3.8
+  - name: level 8
+    enemy: {fileID: 2341812057914022664, guid: 15418ef91d9f816448ba1cdffe812ced, type: 3}
     count: 15
-    rate: 1
+    rate: 4
+  - name: level 9
+    enemy: {fileID: 2341812057914022664, guid: 15418ef91d9f816448ba1cdffe812ced, type: 3}
+    count: 18
+    rate: 4.5
   - name: level 10
     enemy: {fileID: 2341812057914022664, guid: 4d101952b970bac4f982effae828b5fa, type: 3}
-    count: 16
-    rate: 1
-  - name: level 11
-    enemy: {fileID: 2341812057914022664, guid: aea2cb6c87a0dc3418a689c16f888885, type: 3}
-    count: 17
-    rate: 1
-  - name: level 12
-    enemy: {fileID: 2341812057914022664, guid: aea2cb6c87a0dc3418a689c16f888885, type: 3}
-    count: 18
-    rate: 1.5
-  - name: level 13
-    enemy: {fileID: 2341812057914022664, guid: aea2cb6c87a0dc3418a689c16f888885, type: 3}
-    count: 19
-    rate: 1
-  - name: level 14
-    enemy: {fileID: 2341812057914022664, guid: aea2cb6c87a0dc3418a689c16f888885, type: 3}
     count: 20
-    rate: 1
-  - name: level 15
-    enemy: {fileID: 2341812057914022664, guid: aea2cb6c87a0dc3418a689c16f888885, type: 3}
-    count: 21
-    rate: 1
-  - name: level 16
-    enemy: {fileID: 2341812057914022664, guid: 15418ef91d9f816448ba1cdffe812ced, type: 3}
-    count: 16
-    rate: 1
-  - name: level 17
-    enemy: {fileID: 2341812057914022664, guid: 15418ef91d9f816448ba1cdffe812ced, type: 3}
-    count: 23
-    rate: 1
-  - name: level 18
-    enemy: {fileID: 2341812057914022664, guid: 15418ef91d9f816448ba1cdffe812ced, type: 3}
-    count: 24
-    rate: 1
-  - name: level 19
-    enemy: {fileID: 2341812057914022664, guid: 15418ef91d9f816448ba1cdffe812ced, type: 3}
-    count: 25
-    rate: 1
-  - name: level 20
-    enemy: {fileID: 2341812057914022664, guid: 15418ef91d9f816448ba1cdffe812ced, type: 3}
-    count: 26
-    rate: 1
+    rate: 5
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
