@@ -4833,10 +4833,6 @@ PrefabInstance:
       value: _GM
       objectReference: {fileID: 0}
     - target: {fileID: 575284026, guid: 6933b512acdc8a546baf05c14bc39a89, type: 3}
-      propertyPath: waves.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 575284026, guid: 6933b512acdc8a546baf05c14bc39a89, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 648472540}
@@ -5002,6 +4998,11 @@ PrefabInstance:
     - target: {fileID: 9181851489272081347, guid: fdda7087a43e1d64487f7aac64555c48,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181851488588851249, guid: fdda7087a43e1d64487f7aac64555c48,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
