@@ -14,9 +14,7 @@ public class GameMaster : MonoBehaviour
         get { return _remainingLives; }
     }
 
-   
-
-
+  
     void Awake()
     {
         if (gm == null)
